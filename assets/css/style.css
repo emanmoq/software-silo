@@ -366,8 +366,8 @@ h6 {
 .navbar.transparent .navbar-brand {
     padding-top: 25px;
     padding-bottom: 25px;
+    width: 200px;
 }
-
 .navbar-brand img {
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
@@ -474,6 +474,7 @@ h6 {
 .navbar.fixed .navbar-brand img {
     height: 30px !important;
     width: auto !important;
+    transition: all .5s;
 }
 
 .navbar-nav.sm-collapsible .dropdown-menu .dropdown-menu {
@@ -722,17 +723,11 @@ h6 {
 }
 
 @media (min-width: 1200px) {
-    .rev_slider_wrapper.fullscreen-container {
-        min-height: 500px;
+     .rev_slider_wrapper.fullscreen-container,.tp-fullwidth-forcer {
+        max-height: 100vh !important;
+        height: 100vh !important;
     }
 
-    .rev_slider_wrapper.fullwidth-container {
-        min-height: 500px;
-    }
-
-    .rev_slider_wrapper.autowidth-container {
-        min-height: 500px;
-    }
 }
 
 .rev_slider_wrapper {
@@ -758,6 +753,20 @@ h6 {
     height: 100%;
 }
 
+.slider-parallax .slider-inner {
+    position: fixed;
+}
+.slider-inner {
+    position: absolute;
+    overflow: hidden;
+    opacity: 1;
+    visibility: visible;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .slider-parallax,
 .slider-parallax .swiper-container {
     visibility: visible;
@@ -785,7 +794,7 @@ img {
 }
 
 /*-----------------------------------------------------------------------------------*/
-/*	11. SLIDER REVOLUTION 
+/*	SLIDER REVOLUTION 
 /*-----------------------------------------------------------------------------------*/
 .rev_slider_wrapper {
     left: 0px;
@@ -900,7 +909,13 @@ img {
     font-family: 'Montserrat';
     margin: 0;
 }
-
+/*-----------------------------------------------------
+---      Page Content                       -----------
+-----------------------------------------------------*/
+.pageContent{
+    position:relative;
+    background-color: white;
+}
 /*-----------------------------------------------------
 ---        About Us  
 --------------------------------------------------------*/

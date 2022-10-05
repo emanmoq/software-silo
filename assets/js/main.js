@@ -25,41 +25,84 @@ $(document).ready(function () {
       /*-----------------------------------------------------------------------------------*/
 /*	Slider
 /*-----------------------------------------------------------------------------------*/
+    
 
-$('#slider').revolution({
-    sliderType: "standard",
-    jsFileLocation: "asesets/revolution/js/",
-    sliderLayout: "fullscreen",
-    fullScreenOffsetContainer: ".navbar:not(.fixed)",
-    dottedOverlay: "none",
-    delay: 9000,
-    responsiveLevels: [1140, 1024, 778, 480],
-    visibilityLevels: [1140, 1024, 778, 480],
-    gridwidth: [1140, 1024, 778, 480],
-    gridheight: [728, 768, 960, 720],
-    lazyType: "none",
-    shadow: 0,
-    spinner: "off",
-    stopLoop: "on",
-    stopAfterLoops: 0,
-    stopAtSlide: 1,
-    shuffle: "off",
-    hideThumbsOnMobile: "off",
-    hideSliderAtLimit: 0,
-    hideCaptionAtLimit: 0,
-    hideAllCaptionAtLilmit: 0,
-    debugMode: false,
-    fallbacks: {
-        simplifyAll: "off",
-        disableFocusListener: false,
-    },
-    parallax: {
-        type: "mouse",
-        origo: "slidercenter",
-        speed: 1000,
-        levels: [1, 2, 4, 6, 8, 10, 12, 16, 18, 20, 22, 24, 49, 50, 51, 55],
-    },
-});
+if ($("#slider").revolution == undefined) {
+        revslider_showDoubleJqueryError("#slider");
+    } else {
+     $("#slider").show().revolution({
+            sliderType: "standard",
+            sliderLayout: "fullscreen",
+            dottedOverlay: "none",
+            delay: 9000,
+            responsiveLevels: [1140, 1024, 778, 480],
+            visibilityLevels: [1140, 1024, 778, 480],
+            gridwidth: [1140, 1024, 778, 480],
+            gridheight: [728, 768, 960, 720],
+            lazyType: "none",
+            shadow: 0,
+            spinner: "off",
+            stopLoop: "on",
+            stopAfterLoops: 0,
+            stopAtSlide: 1,
+            shuffle: "off",
+            autoHeight: "off",
+            fullScreenAutoWidth: "off",
+            fullScreenAlignForce: "off",
+            fullScreenOffsetContainer: "",
+            fullScreenOffset: "",
+            disableProgressBar: "on",
+            hideThumbsOnMobile: "off",
+            hideSliderAtLimit: 0,
+            hideCaptionAtLimit: 0,
+            hideAllCaptionAtLilmit: 0,
+            debugMode: false,
+            fallbacks: {
+                simplifyAll:"off",
+                disableFocusListener:false,
+            },
+            parallax: {
+                type:"mouse",
+                origo:"slidercenter",
+                speed:300,
+                levels:[2,4,6,8,10,12,14,16,18,20,22,24,49,50,51,55],
+            },
+            navigation: {
+                keyboardNavigation:"off",
+                keyboard_direction: "horizontal",
+                mouseScrollNavigation:"off",
+                onHoverStop:"off",
+                touch:{
+                    touchenabled:"on",
+                    swipe_threshold: 75,
+                    swipe_min_touches: 1,
+                    swipe_direction: "horizontal",
+                    drag_block_vertical: false
+                },
+                arrows: {
+                    style: "hermes",
+                    enable: true,
+                    hide_onmobile: false,
+                    hide_onleave: false,
+                    left: {
+                        h_align: "left",
+                        v_align: "center",
+                        h_offset: 10,
+                        v_offset: 0
+                    },
+                    right: {
+                        h_align: "right",
+                        v_align: "center",
+                        h_offset: 10,
+                        v_offset: 0
+                    }
+                }
+            }
+        });
+ 
+    }
+
+
 
     /*-----------------------------------------------------------------------------------*/
     /*	STICKY HEADER
@@ -73,9 +116,7 @@ $('#slider').revolution({
                 stick: 'banner--stick',
                 unstick: 'banner--unstick'
             },
-            onStick: function () {
-                $($.SmartMenus.Bootstrap.init);
-            },
+         
             onUnstick: function () {
                 $('.navbar .btn-group').removeClass('open');
             }
@@ -84,33 +125,6 @@ $('#slider').revolution({
     }
 
 
-/*-----------------------------------------------------------------------------------*/
-/*	ONEPAGE SMOOTH SCROLL
-/*-----------------------------------------------------------------------------------*/
-$(function () {
-    setTimeout(function () {
-        if (location.hash) {
-            window.scrollTo(0, 0);
-            var target = location.hash.split('#');
-            smoothScrollTo($('#' + target[1]));
-        }
-    }, 1);
-    $('a.scroll[href*=#]:not([href=#])').on('click', function () {
-        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-            smoothScrollTo($(this.hash));
-            return false;
-        }
-    });
-    function smoothScrollTo(target) {
-        var target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-
-        if (target.length) {
-            $('html,body').animate({
-                scrollTop: target.offset().top
-            }, 1500, 'easeInOutExpo');
-        }
-    }
-});
     /*-----------------------------------------------------------------------------------*/
     /*	GO TO TOP
     /*-----------------------------------------------------------------------------------*/
@@ -144,5 +158,6 @@ $(function () {
  
 
 });
+
 
 
