@@ -588,10 +588,14 @@ h6 {
 }
 
 .headerBtn:hover {
-    background-color: transparent;
-    color: #f8550b
+    background-color:rgb(252, 106, 39);
+    color:white
 }
+ .headerBtn:hover{
+animation-name: pulse;
+animation-duration: 1s;
 
+}
 /*-----------------------------------------------------------------------------------*/
 /*	04. STICKY HEADER
 /*-----------------------------------------------------------------------------------*/
