@@ -1056,13 +1056,56 @@ img {
 }
 .ourWorkItem{
     width:100%;
-    height:200px
+    height:400px;
+    overflow: hidden;
+position: relative;
+}
+.workOverlay{
+    position: absolute;
+    left:0;
+    top:0;
+    background-color: rgba(0,0,0,0);
+    transition: all .5s;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    animation-name: fadeIn;
+    transform: translateY(0);
+}
+.workDetailsLink{
+    align-self: center;
+}
+.workDetailsLink a{
+    color:white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #f8550b;
+    display: inline-flex;
+    justify-content: center;
+    font-size: 1.125em;
+}
+.workDetailsLink a:first-child{
+    margin-right: 10px;
+}
+.workDetailsLink a i{
+    align-self: center;
+}
+.ourWorkItem:hover .workOverlay{
+    background-color: rgba(0,0,0,.2);
+    z-index: 2;
+    animation-name: fadeOut;
+    transform: translateY(-15%);
+
 }
 .workImg{
     width:100%;
+    position: relative;
 }
 .workImg  img{
-    width: 100%;;
+    width: inherit;
 }
 .workDetails{
     position: absolute;
@@ -1092,6 +1135,7 @@ img {
 .ourWorkItem:hover .workDetails{
     transform: translateY(0);
 }
+
 /* -------------------------------------------------
 -----               Our CLients                 ------
 --------------------------------------------------*/
