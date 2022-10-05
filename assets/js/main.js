@@ -1,5 +1,6 @@
 $(document).ready(function () {
     'use strict';
+    new WOW().init();
     /*-----------------------------------------------------------------------------------*/
     $(".workSlider").owlCarousel({
         nav: true,
@@ -21,30 +22,7 @@ $(document).ready(function () {
     
         }
       });
-
-    /*-----------------------------------------------------------------------------------*/
-    /*	STICKY HEADER
-    /*-----------------------------------------------------------------------------------*/
-    if ($(".navbar").length) {
-        var options = {
-            offset: 350,
-            offsetSide: 'top',
-            classes: {
-                clone: 'banner--clone fixed',
-                stick: 'banner--stick',
-                unstick: 'banner--unstick'
-            },
-            onStick: function () {
-                $($.SmartMenus.Bootstrap.init);
-            },
-            onUnstick: function () {
-                $('.navbar .btn-group').removeClass('open');
-            }
-        };
-        var banner = new Headhesive('.navbar', options);
-    }
-});
-/*-----------------------------------------------------------------------------------*/
+      /*-----------------------------------------------------------------------------------*/
 /*	Slider
 /*-----------------------------------------------------------------------------------*/
 
@@ -82,6 +60,30 @@ $('#slider').revolution({
         levels: [1, 2, 4, 6, 8, 10, 12, 16, 18, 20, 22, 24, 49, 50, 51, 55],
     },
 });
+
+    /*-----------------------------------------------------------------------------------*/
+    /*	STICKY HEADER
+    /*-----------------------------------------------------------------------------------*/
+    if ($(".navbar").length) {
+        var options = {
+            offset: 350,
+            offsetSide: 'top',
+            classes: {
+                clone: 'banner--clone fixed',
+                stick: 'banner--stick',
+                unstick: 'banner--unstick'
+            },
+            onStick: function () {
+                $($.SmartMenus.Bootstrap.init);
+            },
+            onUnstick: function () {
+                $('.navbar .btn-group').removeClass('open');
+            }
+        };
+        var banner = new Headhesive('.navbar', options);
+    }
+
+
 /*-----------------------------------------------------------------------------------*/
 /*	ONEPAGE SMOOTH SCROLL
 /*-----------------------------------------------------------------------------------*/
@@ -108,7 +110,7 @@ $(function () {
             }, 1500, 'easeInOutExpo');
         }
     }
-    new WOW().init();
+});
     /*-----------------------------------------------------------------------------------*/
     /*	GO TO TOP
     /*-----------------------------------------------------------------------------------*/
@@ -139,6 +141,8 @@ $(function () {
         // Set CSS color to display scrollUp active point, e.g '#00FFFF'
         zIndex: 1001 // Z-Index for the overlay
     });
-
+ 
 
 });
+
+
