@@ -8,7 +8,7 @@
   <title>software-silo </title>
   <link href="assets/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/css/animate.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.0/css/all.css">
   <link href="assets/css/lightbox.css" rel="stylesheet">
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
   <link rel="shortcut icon"
@@ -18,11 +18,14 @@
   <link rel="stylesheet" type="text/css" href="assets/revolution/css/navigation.css">
   <link rel="stylesheet" type="text/css"
     href="assets/revolution/revolution-addons/filmstrip/css/revolution.addon.filmstrip.css">
+  <link href="assets/css/owl.carousel.css" rel="stylesheet">
+  <link href="assets/css/owl.carousel.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="assets/revolution/revolution-addons/typewriter/css/typewriter.css">
   <link href="assets/css/style.css" rel="stylesheet">
 
 </head>
-<header class="pageHeader">
+
+<section class="hero">
   <nav class="navbar transparent absolute navbar-expand-lg text-uppercase">
     <div class="container">
       <div class="navbar-header">
@@ -87,9 +90,7 @@
     </div>
     <!-- /.container -->
   </nav>
-</header>
-<section class="hero">
-  <div class="rev_slider_wrapper bg-dark autowidth-container">
+  <div class="rev_slider_wrapper fullscreen-container">
     <div id="slider" class="rev_slider fullscreenbanner" data-version="5.4.8">
       <ul>
         <li data-transition="fade" data-thumb="assets/images/ar1.jpg"><img src="assets/images/ar1.jpg" alt="" />
@@ -148,7 +149,7 @@
             data-transform_in="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:800;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
             data-speed="800" data-start="1800" data-easing="easeOutQuad" data-splitin="none" data-splitout="none"
             data-elementdelay="0.01" data-endelementdelay="0.1" data-endspeed="1300" data-endeasing="Power4.easeIn"
-            style="z-index: 11;"><a href="#" class="headerBtn btn" style="font-size:30px;width:auto;padding:10px 20px">
+            style="z-index: 11;"><a href="#" class="headerBtn btn" style="font-size:25px;width:auto;padding:20px 30px">
               <span>Request & call back </span></a>
           </div>
         </li>
@@ -171,12 +172,153 @@
     <!-- /.rev_slider -->
   </div>
 </section>
-<section class="aboutUsSec">
-<div class="container">
-  <div class="row">
+<section class="ourServices">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="sectionTitle centerSectionTitle text-center">
+          <h4 class="title">Our services</h4>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="serviceItem  clearfix    wow fadeInDown animated  ">
+          <a href="#">
+            <div class="serviceIcon">
+              <i class="fas fa-line-chart"></i>
+            </div>
+            <div class="serviceDetails">
+              <h4 class="ServiceTitle">UX design</h4>
+              <p>Backed by some of the biggest names in the industry, Firefox OS is an open platform that fosters
+                greater</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="serviceItem  clearfix   wow fadeInDown animated ">
+          <a href="#">
+            <div class="serviceIcon">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <div class="serviceDetails">
+              <h4 class="ServiceTitle">Mobile Application</h4>
+              <p>Backed by some of the biggest names in the industry, Firefox OS is an open platform that fosters
+                greater</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <a href="#">
+          <div class="serviceItem  clearfix wow fadeInDown animated  ">
+            <a href="#">
+              <div class="serviceIcon">
+                <i class="fas fa-sitemap"></i>
+              </div>
+              <div class="serviceDetails">
+                <h4 class="ServiceTitle">ERP</h4>
+                <p>Backed by some of the biggest names in the industry, Firefox OS is an open platform that fosters
+                  greater</p>
+              </div>
+            </a>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4">
 
+        <div class="serviceItem  clearfix wow fadeInDown animated  ">
+          <a href="#">
+            <div class="serviceIcon">
+              <i class="fas fa-line-chart"></i>
+            </div>
+            <div class="serviceDetails">
+              <h4 class="ServiceTitle">web Applications</h4>
+              <p>Backed by some of the biggest names in the industry, Firefox OS is an open platform that fosters
+                greater</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+</section>
+<section class="aboutUsSec">
+  <div class="aboutImg"><img src="assets/images/about.jfif" alt=""></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="aboutSsecTitle">
+          <h4 class="title">About us</h4>
+        </div>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde at nisi possimus repudiandae recusandae ea
+          explicabo delectus voluptatum dignissimos fugiat laudantium deleniti sit a amet sapiente, expedita, voluptate
+          atque dolorem?
+        </p>
+        <a href="#" class="btn headerBtn"><span>Show More About Us</span></a>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="ourWork">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="sectionTitle text-center">
+          <h4 class="title">Our Work</h4>
+        </div>
+        <div class="workSlider owl-carousel">
+          <div class="workItem">
+            <a href="#"><img src="assets/images/img1.jpg" alt=""></a>
+          </div>
+          <div class="workItem">
+            <a href="#"><img src="assets/images/img1.jpg" alt=""></a>
+          </div>
+          <div class="workItem">
+            <a href="#"><img src="assets/images/img1.jpg" alt=""></a>
+          </div>
+          <div class="workItem">
+            <a href="#"><img src="assets/images/img1.jpg" alt=""></a>
+          </div>
+          <div class="workItem">
+            <a href="#"><img src="assets/images/img1.jpg" alt=""></a>
+          </div>
+          <div class="workItem">
+            <a href="#"><img src="assets/images/img1.jpg" alt=""></a>
+          </div>
+          <div class="workItem">
+            <a href="#"><img src="assets/images/img1.jpg" alt=""></a>
+          </div>
+        </div>
+        <div class="text-center"> <a href="#" class="btn headerBtn shwMorBtn"><span>Show More</span></a></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="Idea">
+  <div class="ideaImg">
+    <img src="assets/images/idea.webp" alt="">
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-6">
+        <div class="aboutSsecTitle">
+          <h4>
+            Have An Idea
+          </h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum vero explicabo mollitia provident iure vitae
+            voluptate veritatis quo, alias harum perspiciatis dignissimos nam. Soluta libero vitae inventore omnis
+            doloremque provident.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+
 </section>
 
 <body>
@@ -186,20 +328,23 @@
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
     crossorigin="anonymous"></script>
   <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="assets/js/plugins.js"></script>
+  <script type="text/javascript" src="assets/js/owl.carousel.js"></script>
   <script src="assets/revolution/js/jquery.themepunch.tools.min.js"></script>
   <script src="assets/revolution/js/jquery.themepunch.revolution.min.js"></script>
+  <script src="assets/revolution/js/extensions/revolution.extension.video.min.js"></script>
+  <script src="assets/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
   <script src="assets/revolution/revolution-addons/filmstrip/js/revolution.addon.filmstrip.min.js"></script>
   <script src="assets/revolution/revolution-addons/typewriter/js/revolution.addon.typewriter.min.js"></script>
   <script src="assets/revolution/js/extensions/revolution.extension.actions.min.js"></script>
-  <script src="assets/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
-  <script src="assets/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
   <script src="assets/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
-  <script src="assets/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+  <script src="assets/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
   <script src="assets/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+  <script src="assets/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+  <script src="assets/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
   <script src="assets/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
-  <script src="assets/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
-  <script src="assets/revolution/js/extensions/revolution.extension.video.min.js"></script>
-  <script type="text/javascript" src="assets/js/plugins.js"></script>
+  <script type="text/javascript" src="assets/js/wow.js"></script>
+
   <script type="text/javascript" src="assets/js/main.js"></script>
 
 </body>

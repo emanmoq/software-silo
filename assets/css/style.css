@@ -47,7 +47,126 @@ br {
 }
 
 /*-----------------------------------------------------------------------------------*/
-/*	02. GENERAL
+/*	 SMARTMENUS
+/*-----------------------------------------------------------------------------------*/
+.navbar-nav.sm-collapsible .sub-arrow {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin: -.7em .5em 0 0;
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: .25rem;
+    padding: 0;
+    width: 2em;
+    height: 1.4em;
+    font-size: 1.25rem;
+    line-height: 1.2em;
+    text-align: center
+}
+
+.navbar-nav.sm-collapsible .sub-arrow::before {
+    content: '+'
+}
+
+.navbar-nav.sm-collapsible .show>a>.sub-arrow::before {
+    content: '-'
+}
+
+.navbar-dark .navbar-nav.sm-collapsible .nav-link .sub-arrow {
+    border-color: rgba(255, 255, 255, .1)
+}
+
+.navbar-nav.sm-collapsible .has-submenu {
+    padding-right: 3em
+}
+
+.navbar-nav.sm-collapsible .dropdown-item,
+.navbar-nav.sm-collapsible .nav-link {
+    position: relative
+}
+
+.navbar-nav:not(.sm-collapsible) .nav-link .sub-arrow {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: .255em;
+    vertical-align: .255em;
+    border-top: .3em solid;
+    border-right: .3em solid transparent;
+    border-left: .3em solid transparent
+}
+
+.fixed-bottom .navbar-nav:not(.sm-collapsible) .nav-link .sub-arrow,
+.fixed-bottom .navbar-nav:not(.sm-collapsible):not([data-sm-skip]) .dropdown-toggle::after {
+    border-top: 0;
+    border-bottom: .3em solid
+}
+
+.navbar-nav:not(.sm-collapsible) .dropdown-item .sub-arrow,
+.navbar-nav:not(.sm-collapsible):not([data-sm-skip]) .dropdown-menu .dropdown-toggle::after {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 0;
+    height: 0;
+    margin-top: -.3em;
+    margin-right: 1em;
+    border-top: .3em solid transparent;
+    border-bottom: .3em solid transparent;
+    border-left: .3em solid
+}
+
+.navbar-nav:not(.sm-collapsible) .dropdown-item.has-submenu {
+    padding-right: 2em
+}
+
+.navbar-nav .scroll-down,
+.navbar-nav .scroll-up {
+    position: absolute;
+    display: none;
+    visibility: hidden;
+    height: 20px;
+    overflow: hidden;
+    text-align: center
+}
+
+.navbar-nav .scroll-down-arrow,
+.navbar-nav .scroll-up-arrow {
+    position: absolute;
+    top: -2px;
+    left: 50%;
+    margin-left: -8px;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    border-top: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid;
+    border-left: 7px solid transparent
+}
+
+.navbar-nav .scroll-down-arrow {
+    top: 6px;
+    border-top: 7px solid;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 7px solid transparent
+}
+
+.navbar-nav.sm-collapsible .dropdown-menu .dropdown-menu {
+    margin: .5em
+}
+
+.navbar-nav:not([data-sm-skip]) .dropdown-item {
+    white-space: normal
+}
+
+.navbar-nav:not(.sm-collapsible) .sm-nowrap>li>.dropdown-item {
+    white-space: nowrap
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*	GENERAL
 /*-----------------------------------------------------------------------------------*/
 body {
     -webkit-font-smoothing: antialiased;
@@ -204,11 +323,6 @@ h6 {
     line-height: 50px;
 }
 
-header {
-    position: relative;
-}
-
-
 
 /*-----------------------------------------------------------------------------------*/
 /*	03. NAVBAR
@@ -222,7 +336,7 @@ header {
     top: 0;
     padding-bottom: 10px;
     z-index: 99;
-    border-bottom:1px solid  rgba(255, 255, 255, .3);
+    border-bottom: 1px solid rgba(255, 255, 255, .3);
 }
 
 .navbar .container {
@@ -292,7 +406,7 @@ header {
     min-width: 160px;
     padding: 0;
     margin: 0;
-    background-color: #151515;
+    background-color: #f8550b;
     border: 0;
     border-radius: 0
 }
@@ -445,7 +559,7 @@ header {
 }
 
 .btn {
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     transition: all .5s;
 }
@@ -461,13 +575,15 @@ header {
 
 .headerBtn {
     background-color: #f8550b;
-    width: 150px;
+    width: auto;
     height: 40px;
     border-radius: 8px;
     font-size: .875em;
     color: white;
     border: 1px solid #f8550b;
-    margin: 0 10px
+    margin: 0 10px;
+    padding:0 20px;
+
 }
 
 .headerBtn:hover {
@@ -554,13 +670,15 @@ header {
     margin: 0 5px 5px 5px
 }
 
-.social{
+.social {
     display: flex;
     margin-left: auto;
 }
-.social li a{
-    color:#072497
+
+.social li a {
+    color: #072497
 }
+
 .social li a i {
     background: none;
     -webkit-box-shadow: none;
@@ -576,6 +694,7 @@ header {
     display: table-cell;
     font-size: 18px;
 }
+
 /***
 .social li a:hover i {
     opacity: 0.85;
@@ -592,60 +711,305 @@ header {
 }*/
 
 .social li a:hover {
-    color:#f8550b
-
+    color: #f8550b
 }
+
 /********************************* 
 /** Slider
 /----------------------------------- */
 .rev_slider.bg-dark {
     background-color: #151515 !important;
 }
+
 @media (min-width: 1200px) {
     .rev_slider_wrapper.fullscreen-container {
         min-height: 500px;
     }
+
     .rev_slider_wrapper.fullwidth-container {
         min-height: 500px;
     }
+
     .rev_slider_wrapper.autowidth-container {
         min-height: 500px;
     }
 }
+
 .rev_slider_wrapper {
     left: 0px;
     width: 100%;
 }
+
 .rev_th_auto .rev_slider {
     margin-bottom: 5px !important;
 }
-.rev_slider .tp-bgimg{
+
+.rev_slider .tp-bgimg {
     position: relative;
 }
-.rev_slider .tp-bgimg:before{
+
+.rev_slider .tp-bgimg:before {
     position: absolute;
     content: "";
-    background-color: rgba(255,255,255,.4);
-    left:0;
-    top:0;
+    background-color: rgba(255, 255, 255, .4);
+    left: 0;
+    top: 0;
     width: 100%;
-height: 100%;
+    height: 100%;
 }
-.slider-parallax, .slider-parallax .swiper-container {
+
+.slider-parallax,
+.slider-parallax .swiper-container {
     visibility: visible;
     -webkit-backface-visibility: hidden;
 }
+
 .slider-parallax {
     position: relative;
 }
+
 .slider-element {
     position: relative;
     width: 100%;
     overflow: hidden;
 }
+
 /*-----------------------------------------------------
 ---        About Us  
 --------------------------------------------------------*/
-.aboutUsSec{
-    padding:60px 0
+.aboutUsSec {
+    padding: 60px 0;
+    background-image: url("../images/about.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
 }
+.aboutImg{
+    width: 50%;
+    position: absolute;
+    height: 100%;top:0;
+    right: 0;
+}
+.aboutImg img{
+    width: 100%;
+}
+.sectionTitle {
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 20px;
+    color: #072497;
+    margin-bottom: 40px;
+}
+
+.aboutSsecTitle h4 {
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 20px;
+    color: #f8550b;
+    font-size: 35px;
+}
+
+.sectionTitle .title {
+    font-size: 35px;
+}
+
+.sectionTitle:before {
+    height: 1px;
+    content: "";
+    position: absolute;
+    width: 120px;
+    bottom: 0;
+    left: 0;
+    background: #072497;
+    opacity: .2;
+    margin-left: -60px;
+    left: 50%;
+}
+
+.sectionTitle:after {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    bottom: -10px;
+    left: 10%;
+    margin-left: -12px;
+    border: 5px solid #fff;
+    border-radius: 20px;
+    background: #f8550b;
+    left: 50%;
+}
+
+
+.aboutImg img {
+    width: 100%;
+}
+
+.aboutUsSec p {
+    font-size: 1.125em;
+    color: #072497
+}
+
+.ourServices {
+    padding: 60px 0
+}
+
+.serviceIcon {
+    font-size: 19px;
+    height: 60px;
+    text-align: center;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    color: #f8550b;
+    box-shadow: inset 0 0 0 1px #d7d7d7;
+    transition: background-color 400ms, background-color 400ms;
+    position: relative;
+    margin-right: 15px;
+
+}
+.serviceDetails{
+    width: 75%;
+}
+.serviceIcon i {
+    align-self: center;
+
+}
+.serviceItem {
+    height: 200px;
+}
+.serviceItem a{
+    display: flex;
+}
+.serviceItem a:hover{
+    color: inherit;
+}
+.serviceItem:hover .serviceIcon {
+    background-image: linear-gradient(90deg, #f8550b 0%, #a5725a 100%);
+    color: white;
+    box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.8);
+    transform: scale(1.1);
+    transition: all .5s;
+}
+
+.ServiceTitle {
+    font-size: 1.125em;
+    color: #072497;
+    transition: all .5s;
+
+}
+.serviceDetails p{
+    font-size: .85em;
+    color:#484848
+}
+
+.serviceItem:hover .ServiceTitle {
+    color: #f8550b;
+    transition: all .5s;
+
+}
+/* -------------------------------------------------
+-----               Our Work                 ------
+--------------------------------------------------*/
+.ourWork{
+    padding:40px 0
+}
+.shwMorBtn{
+    margin:auto;
+    margin-top:30px
+}
+
+.workSlider{
+    margin:40px 0;
+ 
+}
+.owl-carousel .owl-dots {
+    width: 100%;
+    position: absolute;
+    bottom: -25px;
+    text-align: center;
+}
+
+.owl-carousel .owl-dots .owl-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 2px;
+    background-color: #EFEFEF;
+    border: 1px solid #C0C0C0;
+}
+
+.owl-carousel .owl-dots .owl-dot.active {
+    background-color: #f8550b;
+    border: 1px solid #f8550b
+}
+.workItem{
+    border-radius: 25px;
+    overflow: hidden;
+    transition: all .5s;
+}
+.owl-carousel .owl-nav {
+    position: absolute;
+    right: 0;
+    top: -65px;
+}
+
+.owl-carousel .owl-nav button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #F2F2F2 !important;
+    color: #f8550b !important;
+    position: absolute;
+    right: 0;
+    border: 1px solid transparent
+}
+
+.owl-carousel .owl-nav button.owl-prev {
+    right: 40px;
+}
+
+.owl-carousel .owl-nav button.disabled {
+    background-color: #F2F2F2 !important;
+    color: rgba(0, 0, 0, .3) !important
+}
+
+.owl-carousel .owl-nav button:hover {
+    background-color: transparent !important;
+    border: 1px solid #f8550b !important
+}
+
+/*------------------------------------------------
+------    Idea Section            ----------------
+-------------------------------------------------*/
+.Idea{
+    padding:40px 0;
+    background-image: url(../images/workprocess.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+    padding-top: 100px;
+
+}
+.ideaImg{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 40%;
+    height: 100%;
+}
+.ideaImg img{
+    width: 100%;;
+    height: 100%;
+}
+.Idea .aboutSsecTitle h4{
+    font-size: 40px;
+}
+.Idea  p{
+    font-size:1.125em;
+    color:white;
+margin-bottom: 30px;}
