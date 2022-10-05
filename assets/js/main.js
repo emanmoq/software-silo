@@ -2,13 +2,13 @@ $(document).ready(function () {
     'use strict';
     new WOW().init();
     /*-----------------------------------------------------------------------------------*/
-    $(".workSlider").owlCarousel({
+    $(".ourCLientSlider").owlCarousel({
         nav: true,
         loop: false,
         dots: true,
         items: 5,
         navText: ['<i class="fa fa-chevron-left"></i>', '<i class="fa fa-chevron-right"></i>'],
-        margin: 20,
+        margin: 40,
         responsive: {
           0: {
             items: 1
