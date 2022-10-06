@@ -1285,3 +1285,48 @@ animation-name: fadeOut;
     color: white;
     margin-bottom: 30px;
 }
+/*-----------------------------------------
+---                  Footer    -----------
+-----------------------------------------*/
+footer{
+    background-color: #151515;
+    padding: 40px 0;
+}.footerLogo{
+    width:150px;
+    margin-bottom: 20px;
+}
+footer p{
+    font-size: 1em;
+    color:#f8550b;
+    opacity: .8;
+    font-weight: 500;
+}
+.footerList li{
+margin-bottom: 20px;
+list-style: none;
+
+}
+.footerList li a{
+    color:#f8550b;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.footerList li:hover a{
+    color:#4c86e5;
+ 
+}
+.footerList i{
+    margin-right:5px;
+    display: inline-block;
+}
+.footerSocial li{
+    margin-right:25px
+}
+.fa-phone-alt{
+    transform: rotate(90deg);
+}
+
+.footerList li:hover a{
+    color: inherit;
+}
