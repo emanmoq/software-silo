@@ -725,14 +725,12 @@ animation-duration: 1s;
 .rev_slider.bg-dark {
     background-color: #151515 !important;
 }
-
-@media (min-width: 1200px) {
-     .rev_slider_wrapper.fullscreen-container,.tp-fullwidth-forcer {
-        max-height: 100vh !important;
-        height: 100vh !important;
-    }
-
+.rev_slider_wrapper.fullscreen-container,.tp-fullwidth-forcer {
+    max-height: 100vh !important;
+    height: 100vh !important;
 }
+
+
 
 .rev_slider_wrapper {
     left: 0px;
@@ -1289,15 +1287,32 @@ animation-name: fadeOut;
 ---                  Footer    -----------
 -----------------------------------------*/
 footer{
-    background-color: #151515;
-    padding: 40px 0;
-}.footerLogo{
+    background-color: #f8550b;
+
+    position: relative;
+}
+.footer-wraper{
+    padding:40px 0
+}
+/*
+footer::before{
+position: absolute;
+content: "";
+background-image: url("../images/footer2.png");
+width: 100%;
+height: 100%;
+opacity: .2;
+bottom: 0;
+background-size: cover;
+
+}*/
+.footerLogo{
     width:150px;
     margin-bottom: 20px;
 }
 footer p{
     font-size: 1em;
-    color:#f8550b;
+    color:white;
     opacity: .8;
     font-weight: 500;
 }
@@ -1307,13 +1322,13 @@ list-style: none;
 
 }
 .footerList li a{
-    color:#f8550b;
+    color:white;
     font-size: 1em;
     font-weight: 500;
 }
 
 .footerList li:hover a{
-    color:#4c86e5;
+    color:#072497;
  
 }
 .footerList i{
@@ -1327,6 +1342,167 @@ list-style: none;
     transform: rotate(90deg);
 }
 
-.footerList li:hover a{
-    color: inherit;
+
+.footerList li.footerSocialLi:hover a{
+    color:white
+}
+.footerList li.footerSocialLi li:hover a {
+    color:#072497
+}
+/*-----------------------------------------------------------------------------------*/
+/*	 HAMBURGER MENU ICON
+/*-----------------------------------------------------------------------------------*/
+.navbar-hamburger,
+.hamburger {
+    line-height: 1;
+}
+.hamburger {
+    display: inline-block;
+    width: 28px;
+    height: 21px;
+    padding: 0;
+    cursor: pointer;
+    transition: transform .2s ease-in-out;
+    -moz-transition: transform .2s ease-in-out;
+    -webkit-transition: transform .2s ease-in-out;
+    vertical-align: middle;
+    border: 0 none;
+    background: none;
+}
+.hamburger::-moz-focus-inner {
+    padding: 0;
+    border: 0 none;
+}
+.hamburger:focus {
+    outline: 0;
+}
+.hamburger:before,
+.hamburger:after {
+    content: "";
+}
+.hamburger:before,
+.hamburger span,
+.hamburger:after {
+    display: block;
+    width: 100%;
+    height: 3px;
+    margin: 0 0 6px;
+    transition: transform .2s ease-in-out;
+    -moz-transition: transform .2s ease-in-out;
+    -webkit-transition: transform .2s ease-in-out;
+    background: #404040;
+}
+.inverse-text .hamburger:before,
+.inverse-text .hamburger span,
+.inverse-text .hamburger:after {
+    background: #FFF;
+}
+.hamburger.animate.active span {
+    transform: scale(0);
+    -moz-transform: scale(0);
+    -webkit-transform: scale(0);
+}
+.hamburger.animate.active:before {
+    transform: translateY(9px) rotate(45deg);
+    -moz-transform: translateY(9px) rotate(45deg);
+    -webkit-transform: translateY(9px) rotate(45deg);
+}
+.hamburger.animate.active:after {
+    transform: translateY(-9px) rotate(-45deg);
+    -moz-transform: translateY(-9px) rotate(-45deg);
+    -webkit-transform: translateY(-9px) rotate(-45deg);
+}
+.InnerHeader{
+    background-color: #f8550b;
+    PADDING:20PX 0;
+    position: relative;
+
+}
+.InnerHeader:before{
+    background-image: url("../images/aboutSlider.png");
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    opacity: .3;
+content: "";
+background-size: cover;
+background-repeat: no-repeat;
+
+}
+.InnerHeader h4{
+    font-size:3em;
+    color:#072497;
+    margin-bottom: 20px;
+}
+.breadcrumb .breadcrumb-item a{
+    color:white;
+
+}
+.breadcrumb{
+    background-color:transparent;
+}
+.breadcrumb-item+.breadcrumb-item::before{
+    content: "\f054";
+    color:white;
+    font-family: "Font Awesome 6 Pro";
+}
+.innerpage-body{
+    padding:20px 0;
+}
+.innerPageTitle span{
+    color:white;
+    font-size: 1em;
+    font-weight: 400;;
+}
+.aboutPageSec{
+    background-color: #f8550b;
+    position: relative;
+}
+.aboutPageSec::before{
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;;
+}
+@media (max-width: 850px){
+    body{
+        font-size:14px
+    }
+.headerBtn {
+    margin:25px 0
+}
+
+.navbar-header{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 20px 10px;
+}
+.aboutUsSec{
+    padding:0
+}
+.aboutImg{
+    position: relative;
+    width: 100%;
+    height:auto;
+    margin-bottom: 20px;
+}
+.navbar.transparent .navbar-brand{
+    padding-top: 0;
+}
+.navbar.transparent{
+    background-color: #FFF;
+    position: relative;
+}
+.Idea{
+    height: auto;
+
+}
+.ideaImg{
+    display: none;
+}
 }

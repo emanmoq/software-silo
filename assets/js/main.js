@@ -1,6 +1,15 @@
 $(document).ready(function () {
     'use strict';
-    new WOW().init();
+  var  wow = new WOW(
+        {
+        boxClass:     'wow',      // default
+        animateClass: 'animate', // default
+        offset:       0,          // default
+        mobile:       false,       // default
+        live:         true        // default
+        }
+                        )
+        wow.init();
     /*-----------------------------------------------------------------------------------*/
     $(".ourCLientSlider").owlCarousel({
         nav: true,
@@ -11,10 +20,12 @@ $(document).ready(function () {
         margin: 40,
         responsive: {
           0: {
-            items: 1
+            items: 1,
+            nav:false
           },
           700: {
-            items: 2
+            items: 2,
+            nav:false
           },
           1000: {
             items: 5,
