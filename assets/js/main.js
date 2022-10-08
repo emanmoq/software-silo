@@ -1,47 +1,24 @@
 $(document).ready(function () {
     'use strict';
-  var  wow = new WOW(
+    var wow = new WOW(
         {
-        boxClass:     'wow',      // default
-        animateClass: 'animate', // default
-        offset:       0,          // default
-        mobile:       false,       // default
-        live:         true        // default
+            boxClass: 'wow',      // default
+            animateClass: 'animate', // default
+            offset: 0,          // default
+            mobile: false,       // default
+            live: true        // default
         }
-                        )
-        wow.init();
+    )
+    wow.init();
+        /*-----------------------------------------------------------------------------------*/
+    /*	Slider
     /*-----------------------------------------------------------------------------------*/
-    $(".ourCLientSlider").owlCarousel({
-        nav: true,
-        loop: false,
-        dots: true,
-        items: 5,
-        navText: ['<i class="fa fa-chevron-left"></i>', '<i class="fa fa-chevron-right"></i>'],
-        margin: 40,
-        responsive: {
-          0: {
-            items: 1,
-            nav:false
-          },
-          700: {
-            items: 2,
-            nav:false
-          },
-          1000: {
-            items: 5,
-          },
-    
-        }
-      });
-      /*-----------------------------------------------------------------------------------*/
-/*	Slider
-/*-----------------------------------------------------------------------------------*/
-    
 
-if ($("#slider").revolution == undefined) {
+
+    if ($("#slider").revolution == undefined) {
         revslider_showDoubleJqueryError("#slider");
     } else {
-     $("#slider").show().revolution({
+        $("#slider").show().revolution({
             sliderType: "standard",
             sliderLayout: "fullscreen",
             dottedOverlay: "none",
@@ -69,22 +46,22 @@ if ($("#slider").revolution == undefined) {
             hideAllCaptionAtLilmit: 0,
             debugMode: false,
             fallbacks: {
-                simplifyAll:"off",
-                disableFocusListener:false,
+                simplifyAll: "off",
+                disableFocusListener: false,
             },
             parallax: {
-                type:"mouse",
-                origo:"slidercenter",
-                speed:300,
-                levels:[2,4,6,8,10,12,14,16,18,20,22,24,49,50,51,55],
+                type: "mouse",
+                origo: "slidercenter",
+                speed: 300,
+                levels: [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 49, 50, 51, 55],
             },
             navigation: {
-                keyboardNavigation:"off",
+                keyboardNavigation: "off",
                 keyboard_direction: "horizontal",
-                mouseScrollNavigation:"off",
-                onHoverStop:"off",
-                touch:{
-                    touchenabled:"on",
+                mouseScrollNavigation: "off",
+                onHoverStop: "off",
+                touch: {
+                    touchenabled: "on",
                     swipe_threshold: 75,
                     swipe_min_touches: 1,
                     swipe_direction: "horizontal",
@@ -110,11 +87,33 @@ if ($("#slider").revolution == undefined) {
                 }
             }
         });
- 
+
     }
 
 
+    /*-----------------------------------------------------------------------------------*/
+    $(".ourCLientSlider").owlCarousel({
+        nav: true,
+        loop: false,
+        dots: true,
+        items: 5,
+        navText: ['<i class="fa fa-chevron-left"></i>', '<i class="fa fa-chevron-right"></i>'],
+        margin: 40,
+        responsive: {
+            0: {
+                items: 1,
+                nav: false
+            },
+            700: {
+                items: 2,
+                nav: false
+            },
+            1000: {
+                items: 5,
+            },
 
+        }
+    });
     /*-----------------------------------------------------------------------------------*/
     /*	STICKY HEADER
     /*-----------------------------------------------------------------------------------*/
@@ -127,7 +126,7 @@ if ($("#slider").revolution == undefined) {
                 stick: 'banner--stick',
                 unstick: 'banner--unstick'
             },
-         
+
             onUnstick: function () {
                 $('.navbar .btn-group').removeClass('open');
             }
@@ -166,7 +165,9 @@ if ($("#slider").revolution == undefined) {
         // Set CSS color to display scrollUp active point, e.g '#00FFFF'
         zIndex: 1001 // Z-Index for the overlay
     });
- 
+
+    /************************************************** */
+
 
 });
 

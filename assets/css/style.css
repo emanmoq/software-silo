@@ -172,7 +172,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: #606060;
-    font-family: 'Muli', sans-serif;
+    font-family: 'Cairo', sans-serif;
     font-size: 16px;
     background: #FFF;
     overflow-x: hidden;
@@ -754,6 +754,10 @@ animation-duration: 1s;
     width: 100%;
     height: 100%;
 }
+.tp-caption img {transform-style: preserve-3d !important;
+transform: rotate3d(262, 104, -165, 75deg) !important;
+width: 200px !important;
+height: 300px !important;}
 
 .slider-parallax .slider-inner {
     position: fixed;
@@ -1071,6 +1075,32 @@ img {
 .ourWork {
     padding: 40px 0
 }
+#CategotyTabs {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 40px;
+}
+#CategotyTabs li {
+    display: inline-block;
+    margin: 0px 3px;
+    transition: all 0.3s ease-in-out;
+}
+#CategotyTabs li a {
+    border: 2px solid #f8550b;
+    display: block;
+    padding: 8px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    color: #fff;
+    margin: 0px;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: #f8550b;
+}
+#CategotyTabs li a.active {
+    background: #fff;
+    color: #f8550b;
+}
 .ourWorkItem{
     width:100%;
     height:300px;
@@ -1097,13 +1127,13 @@ background-color: #f8550b;;
 }
 .workDetailsLink a{
     color:white;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background-color: #f8550b;
     display: inline-flex;
     justify-content: center;
-    font-size: 1.125em;
+    font-size: 1.25em;
 }
 .workDetailsLink a:first-child{
     margin-right: 10px;
@@ -1428,7 +1458,7 @@ list-style: none;
     height: 100%;
     top:0;
     left:0;
-    opacity: .3;
+    opacity: .2;
 content: "";
 background-size: cover;
 background-repeat: no-repeat;
@@ -1471,6 +1501,7 @@ background-repeat: no-repeat;
     width: 100%;
     height: 100%;;
 }
+
 @media (max-width: 850px){
     body{
         font-size:14px
