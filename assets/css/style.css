@@ -1274,7 +1274,23 @@ animation-name: fadeOut;
     background-color: transparent !important;
     border: 1px solid #f8550b !important
 }
-
+.ourCLientSlider.owl-carousel .owl-stage-outer{
+    overflow: visible;
+}
+.ourCLientSlider .owl-item{
+    opacity: 0;
+    transition: all .2s;
+}
+.ourCLientSlider .owl-item.active{
+    opacity: 1;
+    transition: all .2s;
+}
+.clientItem:hover{
+    box-shadow: 0 0px 45px rgba(0, 0, 0, .3);
+    margin-top:-10px;
+    transform: scale(1.1);
+    transition: all .5s;
+}
 /*------------------------------------------------
 ------    Idea Section            ----------------
 -------------------------------------------------*/
@@ -1357,6 +1373,11 @@ list-style: none;
     font-weight: 500;
 }
 
+.listHeader{
+    color:#072497;
+    font-size :1.125em;
+    font-weight: bold;
+}
 .footerList li:hover a{
     color:#072497;
  
