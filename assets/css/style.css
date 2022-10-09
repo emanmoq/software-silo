@@ -1752,6 +1752,72 @@ textarea{
 .contactinfo{
     height: 260px;
 }
+/*------------------ Services Page -----------------*/
+.servicesPageTitle h4{
+    font-size:1.8em;
+    color:#f8550b
+}
+.servicesPageTitle span{
+    font-size:1.2em;
+    color:#072497;
+    display: block;
+    margin-top:20px
+}
+.servicesPageTitle{
+    margin-bottom: 30px;
+}
+.servicesInnerBox{
+    position: relative;
+    margin-bottom: 80px;
+    margin-top: 50px;
+
+}
+.servicesInnerBox:hover .innerServiceImg{
+    transform: scale(1.1);
+    transition: all .5s;
+}
+.innerServiceImg{
+    border: 2px solid #f8550b;
+    width: 140px;
+    height: 140px;
+    overflow: hidden;
+    border-radius: 50%;
+    position: absolute;
+    left: 11px;
+    top: -40px;
+    transition: all .5s;
+}
+.innerServiceImg img{
+    width: 100%;
+}
+.serviceBoxTitle{
+    font-size:1.5em;
+    color:#f8550b;
+    margin-bottom: 20px;
+    text-align: right;
+    transition: all .5s;
+}
+.servicesInnerBox:hover .serviceBoxTitle{
+    color: #072497;
+    transition: all .5s;
+}
+.serviceBoxDesc{
+    padding: 90px 18px 10px;
+    transition: all .5s;
+    box-shadow: 0 0 10px rgb(175 175 175 / 23%);
+    border-radius: 10px;
+    height: 250px;
+    overflow: hidden;
+    margin-bottom: 35px;
+    font-size:1em;;
+    color:#072497
+}
+.servicesInnerBox:hover .serviceBoxDesc{
+    background-color: #f8550b;
+    color:white;
+    transition: all .5s;
+    box-shadow: 0 0 10px rgb(175 175 175 /30%);
+}
 /******************************************/
 @media (max-width: 850px){
     body{
