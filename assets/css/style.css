@@ -190,15 +190,6 @@ body {
     font-family: 'Montserrat';
 }
 
-.container {
-    padding-right: 0;
-    padding-left: 0;
-}
-
-.container-fluid {
-    padding-left: 15px;
-    padding-right: 15px
-}
 
 .navbar .container-fluid {
     padding-left: 30px;
@@ -479,6 +470,7 @@ h6 {
     height: 30px !important;
     width: auto !important;
     transition: all .5s;
+
 }
 
 .navbar-nav.sm-collapsible .dropdown-menu .dropdown-menu {
@@ -606,6 +598,8 @@ animation-duration: 1s;
 .navbar.fixed {
     margin: 0;
     width: 100%;
+    background-color: rgba(255, 255, 255, .7);
+    z-index: 999999;
 }
 
 .banner--clone {
@@ -924,7 +918,6 @@ img {
     position:relative;
     background-color: white;
     width: 100%;
-    z-index: 9999999999;;
     height: 100vh!important;
 }
 /*-----------------------------------------------------
@@ -1503,12 +1496,11 @@ background-repeat: no-repeat;
     background-color:transparent;
 }
 .breadcrumb-item+.breadcrumb-item::before{
-    content: "\f054";
+
     color:white;
-    font-family: "Font Awesome 6 Pro";
 }
 .innerpage-body{
-    padding:40px 0;
+    padding-top:60px;
 }
 .innerPageTitle span{
     color:white;
@@ -1516,8 +1508,8 @@ background-repeat: no-repeat;
     font-weight: 400;;
 }
 .aboutPageSec{
-    background-color: #f8550b;
     position: relative;
+    padding:20px 0
 }
 .aboutPageSec::before{
     content: "";
@@ -1533,6 +1525,138 @@ background-repeat: no-repeat;
     text-align: center;
     font-size: .85em;
 }
+.aboutpageImg img{
+    width: 100%;
+}
+.aboutpageImg{
+    position: relative;
+}
+.aboutpageImg:before {
+    content: "";
+    left: 2%;
+    right: 2%;
+    top: 2%;
+    bottom: 2%;
+    margin:2%;
+    background-color: transparent;
+    opacity: 1;
+    border: 2px solid #f8550b;
+    z-index: 1;
+ 
+    position: absolute;
+}
+.aboutCont h3{
+    font-size: 2em;
+    color:#f8550b;
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+.aboutCont p{
+    font-size: 1em;
+    color:#072497;
+    margin-bottom: 20px;
+}
+.aboutBtn{
+    font-size: 1.2em;
+    display: block;
+    margin-top: 20px;
+}
+.missionSec{
+    position: relative;
+    padding:30px 0;
+    background-image: url(../images/about.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.coreList {
+    padding:0;
+
+    margin: 0;
+}
+.coreList li{
+    padding:0;
+    margin: 0;
+}
+.coreList li{
+list-style-type: circle;
+position: relative;
+font-size: 1em;
+color:#072497;
+margin-bottom: 20px;
+}
+.whyChoose{
+    position: relative;
+    background-color: #f8550b;
+    padding:20px 0
+}
+.whyChoose::before{
+    position: absolute;
+    background-image: url("../images/about.jfif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+    top:0;
+    height: 100%;
+    right: 0;
+    content: "";
+}
+.whyChoose::after{
+    position: absolute;
+    background-image: url("../images/footer-2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+    top:0;
+    height: 100%;
+    left: 0;
+    content: "";
+    opacity: .2;
+} 
+.chooseTitle h3{
+    color:#072497
+}
+.chooseTitle p{
+    color: white;
+}
+.chooseTitle .coreList li{
+    color: white;
+}
+.abouthelp{
+    position: relative;
+    padding:60px 0;
+    background-color: #f8550b;
+}
+.abouthelp::before{
+    position: absolute;
+    background-image: url("../images/footer-2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+    top:0;
+    height: 100%;
+    right: 0;
+    content: "";
+    opacity: .2;
+}
+.abouthelp::after{
+    position: absolute;
+    background-image: url("../images/about.jfif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+    top:0;
+    height: 100%;
+    left: 0;
+    content: "";
+} 
+.whiteBtn{
+    background-color: white;
+    color:#f8550b;
+    border:1px solid #fff;
+    float: right;
+}
+
+/******************************************/
 @media (max-width: 850px){
     body{
         font-size:14px
@@ -1569,5 +1693,31 @@ background-repeat: no-repeat;
 }
 .ideaImg{
     display: none;
+}
+.ourWorkBox {
+    width: 100%;
+    overflow: hidden;
+}
+.mobilehidden{
+    display: none !important;
+}
+.ourCLientSlider.owl-carousel .owl-stage-outer{
+    overflow: hidden;
+}
+.whyChoose::before{
+width: 100%;
+opacity: .1;
+}
+.whyChoose::after{
+    width: 100%;
+    opacity: .1;
+}
+.abouthelp::before{
+    width: 100%;
+    opacity: .1;;
+}
+.abouthelp::after{
+    width: 100%;
+    opacity: .1;
 }
 }
