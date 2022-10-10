@@ -1810,13 +1810,18 @@ textarea{
     overflow: hidden;
     margin-bottom: 35px;
     font-size:1em;;
-    color:#072497
+    color:#072497;
+    background-color: white;
 }
 .servicesInnerBox:hover .serviceBoxDesc{
     background-color: #f8550b;
     color:white;
     transition: all .5s;
     box-shadow: 0 0 10px rgb(175 175 175 /30%);
+}
+.servicesPageBtn{
+    margin-bottom:30px;
+    font-size: 1.2em;
 }
 /******************************************/
 @media (max-width: 850px){
@@ -1881,5 +1886,8 @@ opacity: .1;
 .abouthelp::after{
     width: 100%;
     opacity: .1;
+}
+.serviceBoxTitle {
+    font-size:1em;
 }
 }
