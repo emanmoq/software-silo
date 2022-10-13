@@ -116,9 +116,7 @@ br {
     border-left: .3em solid
 }
 
-.navbar-nav:not(.sm-collapsible) .dropdown-item.has-submenu {
-    padding-right: 2em
-}
+
 
 .navbar-nav .scroll-down,
 .navbar-nav .scroll-up {

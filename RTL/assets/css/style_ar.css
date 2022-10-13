@@ -1,0 +1,36 @@
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #606060;
+    font-family: 'Noto Kufi Arabic', sans-serif;
+    font-size: 16px;
+    background: #FFF;
+    overflow-x: hidden;
+    text-align: right !important;
+    direction: rtl;
+
+}
+
+.aboutImg{
+    left:0;
+    right: auto;
+}
+.aboutDetails{
+    margin-left: 40px;
+}
+.serviceIcon{
+    margin-right: 0;
+    margin-left: 15px;
+}
+.whyChoose::before{
+    right: auto;
+    left: 0;
+}
+.innerServiceImg{
+    left: auto;
+    right: 11px;
+}
+.serviceBoxTitle{
+    text-align: left;
+}
