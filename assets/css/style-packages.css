@@ -90,7 +90,9 @@ footer p {
 }
 
 
-
+.packagesBtnSec .demoBtn{
+    color:white
+}
 .packagesBtnSec .packageDashBtn {
     position: relative;
     background-color: white;
@@ -351,6 +353,8 @@ padding: 22px 19px;
 height: 250px;
 text-align: center;
 margin-bottom: 20px;
+transition: all .5s;
+
 }
 .featurePackIcon{
     height: 46px;
@@ -359,7 +363,12 @@ margin-bottom: 20px;
     margin-bottom: 22px;
 }
 .featurePackageBox:hover svg path{
-    fill :#F8550B
+    fill :#F8550B;
+    transition: all .5s;
+
+}
+.featurePackageBox svg path{
+    transition: all .5s;
 }
 .featurePackageBox h4{
 font-size: 1.125em;
@@ -376,8 +385,14 @@ transition: all .5s;
     max-height: 70px;
     overflow: hidden;
     line-height: 1;
+    margin: 0;
 }
 .featurePackageBox:hover h4{
     color:#F8550B;
+    transition: all .5s;
+}
+.featurePackageBox:hover{
+    box-shadow: 0px 4px 15px rgb(0 0 0 / 25%);
+    margin-top:3px;
     transition: all .5s;
 }
