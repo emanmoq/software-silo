@@ -178,6 +178,7 @@ body {
     font-size: 16px;
     background: #FFF;
     overflow-x: hidden;
+    position: relative;
 }
 
 .font-body {
@@ -1402,6 +1403,7 @@ list-style: none;
 .navbar-hamburger,
 .hamburger {
     line-height: 1;
+    align-self: center;
 }
 .hamburger {
     display: inline-block;
@@ -1821,6 +1823,9 @@ textarea{
     margin-bottom:30px;
     font-size: 1.2em;
 }
+.close{
+    display: none;
+}
 /******************************************/
 @media (max-width: 850px){
     body{
@@ -1835,6 +1840,7 @@ textarea{
     justify-content: space-around;
     width: 100%;
     padding: 20px 10px;
+    z-index: 222;
 }
 .aboutUsSec{
     padding:0
@@ -1845,9 +1851,7 @@ textarea{
     height:auto;
     margin-bottom: 20px;
 }
-.navbar.transparent .navbar-brand{
-    padding-top: 0;
-}
+
 .navbar.transparent{
     background-color: #FFF;
     position: relative;
@@ -1864,7 +1868,7 @@ textarea{
     overflow: hidden;
 }
 .mobilehidden{
-    display: none !important;
+    display: block !important;
 }
 .ourCLientSlider.owl-carousel .owl-stage-outer{
     overflow: hidden;
@@ -1887,5 +1891,84 @@ opacity: .1;
 }
 .serviceBoxTitle {
     font-size:1em;
+}
+.navbar-collapse.collapse.show{
+    left: 0;
+    opacity: 1;
+}
+body:before{
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .2);
+    z-index: 2;
+    display: none;
+}
+.pageContent{
+    height: auto !important;
+}
+
+.collapsing {
+    position: absolute;
+    height: 100vh !important;
+    overflow: hidden;
+    transition: all .15s ease;
+    background-color: white;
+    left:-200px
+}
+.navbar-collapse.collapse{
+    position: absolute;
+    left: -200px;
+    padding: 10px;
+    z-index: 33333;
+    top: 80;
+    opacity: 0;
+    height: 100vh !important;
+    background-color: white;
+    width: 100%;
+}
+.fixed.banner--stick .navbar-collapse.collapse{
+    top:0
+}
+.navbar.transparent .navbar-brand {
+    padding:0;
+}
+.ourServices{
+    padding:20px 0;
+}
+.serviceItem{
+    height: auto;
+    margin-bottom: 20px;
+}
+.serviceItem{
+    margin:0
+}
+ul{
+    padding: 0mm;
+}
+#CategotyTabs li a{
+    padding:3px 6px
+}
+.tp-caption img {
+
+    width: 100px !important;
+    height: 180px !important;
+}
+.close{
+    display: block;
+    position: absolute;
+    right:10px;
+    opacity:.5;
+    background-color: transparent;
+    border:0;
+    top:10px;
+    font-size:20px;
+    z-index: 9999999999999;
+}
+.navbar-nav .nav-item{
+    margin-top:20px
 }
 }

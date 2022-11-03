@@ -1,0 +1,383 @@
+.packagesHeroText {
+    padding-top: 200px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.packagesHeroText h5 {
+    font-size: 4.5em;
+    color: white;
+    position: relative;
+    margin-bottom: 24px;
+    display: inline-block;
+    font-weight: 600;
+}
+
+.packagesHeroText h5:before {
+    position: absolute;
+    content: "";
+    width: 150px;
+    margin: auto;
+    height: 1px;
+    background-color: white;
+    bottom: -40px;
+    left: 55px
+}
+
+.packagesHeroText p {
+    font-size: 1.125em;
+    color: white;
+    margin-top: 37px
+}
+
+.packagesHeroItem {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    position: relative;
+    display: flex;
+    width: 100%;
+}
+
+.packagesHero {
+    height: 500px;
+}
+
+.packagesHeader .navbar {
+    background-color: white;
+    padding: 20px 0
+}
+
+.packagesHeroItem:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.packagesHero .owl-dots .owl-dot {
+    background: rgba(0, 35, 156, 0.2);
+    margin: 10px;
+    width: 10px;
+    height: 12px;
+}
+
+.packagesHero .owl-dots .owl-dot:focus {
+    box-shadow: none;
+    outline: 0;
+}
+
+.packagesHero .owl-dots {
+    bottom: -45px
+}
+
+.packagesHero .owl-dots .owl-dot.active {
+    width: 15px;
+    height: 15px;
+    transform: scale(1.1);
+    background-color: #072497;
+    border: 0
+}
+
+footer p {
+    margin-bottom: 0;
+}
+
+.packagesBtnSec {
+    padding: 55px 0;
+    padding-top:90px
+}
+
+
+
+.packagesBtnSec .packageDashBtn {
+    position: relative;
+    background-color: white;
+    border-radius: 4px;
+
+}
+
+.border-gradiant a {
+    color: #f8550b;
+    font-size: 1.5em;
+    font-weight: 500;
+    width: 100%;
+    height: 100%;
+    margin-left: 0;
+
+}
+
+.border-gradiant:first-child {
+    padding: 0
+}
+
+.border-gradiant:first-child:hover a {
+    background-image: none;
+    color: #f8550b;
+    background-color: white;
+    border: 1px solid #f8550b
+}
+.border-gradiant:first-child a {
+background-color: transparent;
+}
+.border-gradiant {
+    background: linear-gradient(95.35deg, #00239C -21.91%, rgba(255, 80, 0, 0.76) 109.49%);
+    padding: 1px;
+    width: 168px;
+    border-radius: 4px;
+    display: inline-flex;
+    height: 48px;
+}
+
+.border-gradiant:last-child {
+    margin-left: 20px;
+}
+
+.border-gradiant:hover a {
+    background-color: #f8550b;
+    transition: all .5s;
+    color: white;
+}
+
+.PackageTitle {
+    text-align: center;
+}
+
+.PackageTitle h4 {
+    font-size: 2.375em;
+color:black;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.PackageTitle p {
+    color:black;
+    font-size: 1.125em
+    
+}
+
+.PackageTitle {
+    margin-bottom: 50px
+}
+
+#pill-tabContent {
+    margin-top: 30px
+}
+
+#pill-tabs li {
+    border: 0;
+    background-color: transparent;
+}
+
+#pill-tabs {
+    justify-content: center;
+}
+
+#pill-tabs .nav-link {
+    color: #121212;
+    position: relative;
+}
+
+#pill-tabs .nav-link:before {
+    content: "";
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #D9D9D9;
+    display: inline-block;
+    margin-right: 14px;
+}
+
+#pill-tabs .nav-link.active {
+    background-color: transparent;
+    color: #121212
+}
+
+#pill-tabs .nav-link.active:before {
+    background-color: #f8550b;
+}
+
+.plans {
+    padding: 24px 0;
+    background: #FCFCFC;
+}
+
+.pricingBox {
+    background-color: white;
+    border-radius: 4px;
+    padding: 20px 10px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    height: 563px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    transition: all .5s;
+}
+
+.PackagType {
+    width: 100px;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    height: 33px;
+    justify-content: center;
+    font-size: 1.125em;
+
+}
+
+.basicPackage .PackagType {
+    background: #2ED3DD;;
+}
+
+.PackagType span {
+    align-self: center;
+}
+
+.pricingIcon {
+    margin: auto;
+    margin-bottom: 28px;
+    width: 54px;
+    height: 49px;
+    margin-top:23px
+}
+.pricePackage{
+    margin-bottom: 20px;
+}
+.pricePackage h4{
+    font-size: 1.5em;
+    color:black;
+    font-weight: 600;
+    display: inline-block;
+}
+.pricePackage span{
+    font-size: 1.125em;
+    color:#C3C3C3
+}
+.pricingBox p{
+    font-size: .875em;
+    color:#AFADAD;
+    font-weight: 400;
+    margin-bottom:40px;
+    line-height: 1;
+}
+.packagesList li{
+    display: block;
+    margin-bottom: 15px;
+    font-weight: 400;
+    font-size: .875em;
+}
+.packagesList {
+    padding:0;
+    margin: 0;
+}
+.packagesList span{
+    width: 23px;
+    height: 23px;
+    display: inline-flex;
+    justify-content: center;
+    margin-right: 7px;
+    border-radius: 50%;
+
+}
+.basicPackage .packagesList span{
+    background-color: #2ED3DD;
+}
+.packagesList span i{
+    color: white;
+    align-self: center;
+}
+
+.pricingBox .packagesList span.disable{
+    background-color: #B8BCBB;
+}
+.packageBtn{
+    font-size: 1.5em;
+    color:#f8550b;
+    border:1px solid #F8550B;
+    background-color: transparent;
+    width: 180px;
+    height: 48px;
+    align-self: center;
+    margin-top: auto;
+}
+.pricingBox:hover .packageBtn{
+    background-color: #f8550b;
+    color: white;
+}
+.standerPackage .PackagType{
+    background-color: #7B83E8;
+}
+.standerPackage .packagesList span{
+    background-color: #7B83E8;
+}
+.PremiumPackage .PackagType{
+    background-color: #9C5AE7;
+}
+.PremiumPackage .packagesList span{
+    background-color: #9C5AE7;
+}
+.specialPackage .PackagType{
+    background-color: #F707F2;
+}
+.specialPackage .packagesList span{
+    background-color: #F707F2;
+}
+.pricingBox:hover {
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.2);
+    margin-top: -5px;
+    transition: all .5s;
+}
+
+.basicFeaturesPack .PackageTitle{
+    text-align: left;
+    margin-bottom: 43px;
+}
+.basicFeaturesPack{
+    padding:43px 0 73px
+}
+.featuredTitle h4{
+font-size: 1.75em;
+}
+.featurePackageBox{
+    background: #FFFFFF;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+padding: 22px 19px;
+height: 250px;
+text-align: center;
+margin-bottom: 20px;
+}
+.featurePackIcon{
+    height: 46px;
+    margin:auto;
+    width: 47px;
+    margin-bottom: 22px;
+}
+.featurePackageBox:hover svg path{
+    fill :#F8550B
+}
+.featurePackageBox h4{
+font-size: 1.125em;
+color:black;
+font-weight: 500;
+margin-bottom: 22px;
+transition: all .5s;
+
+}
+.featurePackageBox p{
+    font-size: 1em;
+    font-weight: 400;
+    color:#727272;
+    max-height: 70px;
+    overflow: hidden;
+    line-height: 1;
+}
+.featurePackageBox:hover h4{
+    color:#F8550B;
+    transition: all .5s;
+}
